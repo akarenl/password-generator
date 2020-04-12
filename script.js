@@ -7,12 +7,23 @@ if (charLength > 7 && charLength < 129) {
   // Ask for Lowercase
   var lowerResult = ("");
   var lowerCase = ("abcdefghijklmnopqrstuvwxyz");
-  var lowerUser = confirm("Do you want lowercase characters?");
+  var lowerUser = confirm("Do you want lowercase letters?");
   if (lowerUser === true) {
     for (var i = 0; i < charLength; i++) {
       lowerResult += lowerCase.charAt(Math.floor(Math.random() * charLength));
     }
     console.log(lowerResult);
+  }
+
+  // Ask for Uppercase
+  var upperResult = ("");
+  var upperCase = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+  var upperUser = confirm("Do you want uppercase letters?");
+  if (upperUser === true) {
+    for (var j = 0; j < charLength; j++) {
+      upperResult += upperCase.charAt(Math.floor(Math.random() * charLength));
+    }
+    console.log(upperResult);
   }
 
 
