@@ -2,12 +2,28 @@
 var generateBtn = document.querySelector("#generate");
 //  password length
 var charLength = prompt("Please enter desired password length");
-if (charLength > 8 && charLength < 129) {
+if (charLength > 7 && charLength < 129) {
+
+  // Ask for Lowercase
+  var lowerResult = ("");
+  var lowerCase = ("abcdefghijklmnopqrstuvwxyz");
+  var lowerUser = confirm("Do you want lowercase characters?");
+  if (lowerUser === true) {
+    for (var i = 0; i < charLength; i++) {
+      lowerResult += lowerCase.charAt(Math.floor(Math.random() * charLength));
+    }
+    console.log(lowerResult);
+  }
+
+
+
 } else {
   alert("Must be between 8 and 128 characters!");
+
 }
 
-// Ask for Lowercase
+
+
 
 // Write password to the #password input
 function writePassword() {
@@ -19,13 +35,6 @@ function writePassword() {
   // ************^^Don't Touch ^^******
 
 
-
-  // upper case
-  var upperCase = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-  // lower case
-  var lowerCase = ("abcdefghijklmnopqrstuvwxyz");
-  // special characters
-  var specChar = ("");
 
 
 
