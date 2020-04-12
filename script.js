@@ -26,6 +26,17 @@ if (charLength > 7 && charLength < 129) {
     console.log(upperResult);
   }
 
+  // ask if adding numbers
+  var numResult = ("");
+  var numChoice = ("0123456789");
+  var numUser = confirm("Do you want numbers?");
+  if (numUser === true) {
+    for (var k = 0; k < charLength; k++) {
+      numResult += numChoice.charAt(Math.floor(Math.random() * charLength));
+    }
+    console.log(numResult);
+  }
+
 
 
 } else {
